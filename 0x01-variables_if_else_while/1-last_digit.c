@@ -4,7 +4,7 @@
 
 /**
  * main - display last number
- *      
+ *
  * Return: Always 0 (success)
  */
 int main(void)
