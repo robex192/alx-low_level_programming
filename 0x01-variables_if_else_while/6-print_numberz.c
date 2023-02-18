@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+/**
+ * main - display last number
+ *
+ * Return: Always 0 (success)
+ */
+
+int main(void)
+{
+        int n;
+
+        for (n = 48; n < 58; n++)
+        {
+                putchar("%d", n);
+        }
+        putchar("\n");
+        return (0);
+}
