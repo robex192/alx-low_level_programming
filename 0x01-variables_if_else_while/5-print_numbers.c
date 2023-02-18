@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 /** main - this base ten number print 
  * followed by new line
  */
@@ -11,5 +12,5 @@ int main(void)
 		printf("%d",n);
 	}
 	printf("\n");
-	return (0);
+	return(0);
 }
