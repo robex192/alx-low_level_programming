@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - prints the  lowercase and uppercase  alphabet
+ * main - prints the  lowercase and 
+ * uppercase  alphabet
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -10,12 +11,14 @@ int main(void)
 
         for (ch = 'a'; ch <= 'z'; ch++)
         {
-                putchar(ch);
+		putchar(ch);
         }
 	for (ch = 'A'; ch <= 'Z'; ch++)
         {
-                putchar(ch);
+		putchar(ch);
         }
         putchar('\n');
+
         return (0);
+
 }
