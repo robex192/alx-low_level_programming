@@ -5,7 +5,6 @@
 /**
  * main - Display the last number of random
  *        
- *
  * Return: Always 0.
  */
 int main(void)
