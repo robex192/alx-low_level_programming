@@ -1,8 +1,10 @@
 #include<stdio.h>
 
-/** main - this base ten number print 
-* followed by new line
-*/
+/**
+ * main - display last number
+ *
+ * Return: Always 0 (success)
+ */
 
 int main(void)
 
