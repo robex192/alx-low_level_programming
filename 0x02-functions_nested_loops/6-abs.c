@@ -5,7 +5,7 @@
  * _abs - computes the absolute value of an integer
  * @n: n is an integer
  *
- * Retrun: integer
+ * Return: integer
  */
 
 int _abs(int i)
