@@ -7,7 +7,9 @@
  */
 void swap_int(int *a, int *b)
 {
+
 	int mimo;
+
 	mimo = *a;
 	*a = *b;
 	*b = mimo;
