@@ -8,32 +8,41 @@
  * @height: height input
  * Return: pointer to  dim. array		
  */
-
-int **alloc_grid(int width, int height)		
+int **alloc_grid(int width, int height) 
 {
-	int **mee;
-	int x, y;
-		
-	if (width <= 0 || height <= 0)
+	int j, i;
+	int **arr;
+
+	if (width < 1 || height < 1)
 		return (NULL);
-	mee = malloc(sizeof(int *) * height);
-	if (mee == NULL)
-		return (NULL);
-	for (x = 0; x < height; x++)	
+
+	arr = (int **)malloc(sizeof(int *) * height);
+	if (arr == NULL)
 	{
-		mee[x] = malloc(sizeof(int) * width);
-		if (mee[x] == NULL)
-		{
-			for (; x >= 0; x--)
-				free(mee[x]);
-			free(mee);
-			return (NULL);
-		}	
+		free(arr);
+		return (NULL);
 	}
-	for (x = 0; x < height; x++)	
+
+	for (i = 0; i < height; i++)
 	{
-		for (y = 0; y < width; y++)
-			mee[x][y] = 0;	
-	}				
-	return (mee);		
+		arr[i] = malloc(sizeof(int) * width);
+		if (arr[i] == NULL)
+		{
+			for (i = 0; i < height; i++)
+			{
+				free(arr[i]);
+			}
+			free(arr);
+			return (NULL);
+		}
+	}
+
+
+	for (i = 0; i < height; i++)
+		for (j = 0; j < width; j++)
+		{
+			arr[i][j] = 0;
+		}
+
+	return (arr);
 }
