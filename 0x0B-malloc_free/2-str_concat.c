@@ -1,17 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
+
+
 /**
- * str_concat - function that concatenates two strings.
- *              if NULL is passed, treat it as an empty string
- *              The function should return NULL on failure
- *
- * @s1: This is the output string
- * @s2: This is the input string
- *
- * Return: The returned pointer should point to a newly allocated space in
- *         memory which contains the contents of s1, followed by the contents 
- *         of s2, and null terminated
+ * str_concat - get ends of input and add together for size
+ * @s1: input one to concat
+ * @s2: input two to concat
+ * Return: concat of s1 and s2
  */
 
 char *str_concat(char *s1, char *s2)
