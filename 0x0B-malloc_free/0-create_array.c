@@ -3,13 +3,11 @@
 
 
 /**
- * create_array - create array of size size and assign char c		
- * @size: size of array		
- * @c: char to assign		
- * Description: creat array of size size and assign char c		
- * Return: pointer to array, NULL if fail		
- *		
- */		
+ * create_array - Entry point
+ *@size: size of the array
+ *@c: character
+ * Return: a pointer to the array, or NULL if it fails
+ */	
 char *create_array(unsigned int size, char c)
 {
 		
