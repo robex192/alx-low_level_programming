@@ -1,47 +1,42 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 
 /**
- * alloc_grid - nested loop to make grid
- * @width: width input
- * @height: height input
- * Return: pointer to  dim array
- *
+ * **alloc_grid - function to allocate memory to grid
+ * @width: int type
+ * @height: int type
+ * Return: grid of 0s
  */
-
-int **alloc_grid(int width, int height) 
+int **alloc_grid(int width, int height)
 {
+	int x, y;
+	int **ptr;
 
-	int j, i;
-	int **arr;
-
-	if (width < 1 || height < 1)
-		return (NULL);
-	arr = (int **)malloc(sizeof(int *) * height);
-	if (arr == NULL)
+	if (width <= 0 || height <= 0)
 	{
-		free(arr);
+		return  (NULL);
+	}
+	ptr = malloc(height * sizeof(int *));
+	if (ptr == NULL)
+	{
 		return (NULL);
 	}
-	for (i = 0; i < height; i++)
+	for (x = 0; x < height; x++)
 	{
-		arr[i] = malloc(sizeof(int) * width);
-		if (arr[i] == NULL)
+		ptr[x] = malloc(width * sizeof(int));
+		if (ptr[x] == NULL)
 		{
-			for (i = 0; i < height; i++)
-			{
-				free(arr[i]);
-			}
-			free(arr);
+			for (y = 0; y < x;  y++)
+				free(ptr[y]);
+			free(ptr);
 			return (NULL);
 		}
-	}
-	for (i = 0; i < height; i++)
-		for (j = 0; j < width; j++)
+		for (y = 0; y < width; y++)
 		{
-			arr[i][j] = 0;
+			ptr[x][y] = 0;
 		}
-
-	return (arr);
+	}
+	return (ptr);
 }
