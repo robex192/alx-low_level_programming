@@ -1,7 +1,5 @@
+#ifndef OBJECTLIKEMACRO_H
+#define OBJECTLIKEMACRO_H
 #define SIZE 1024
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
+#endif /* OBJECTLIKEMACRO_H */
