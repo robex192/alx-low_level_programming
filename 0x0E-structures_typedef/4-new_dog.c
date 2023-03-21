@@ -17,7 +17,7 @@ int _strlen(char *s)
 		i++;
 	}
 	return (i);
-	}
+}
 
 /**
 * *_strcpy - copies the string pointed to by src
@@ -28,6 +28,7 @@ int _strlen(char *s)
 *
 * Return: the pointer to dest
  */
+
 char *_strcpy(char *dest, char *src)
 {
 	int len, i;
@@ -54,6 +55,7 @@ char *_strcpy(char *dest, char *src)
 *
 * Return: pointer to the new dog (Success), NULL otherwise
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
@@ -79,7 +81,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		}
 	_strcpy(dog->name, name);
 	_strcpy(dog->owner, owner);
-	dog->age = age;
+		dog->age = age;
 
 		return (dog);
 	}
